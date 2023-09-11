@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Players</title>
+    <link rel="icon" href="logo_btn/favicon.ico" type="image/png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/cf845565b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- - - - - - - - - - - MAIN NAV - - - - - - - - - - -->
+
+    <nav class="navbar ">
+      <div class="logo">
+            <img src="logo_btn/ipl-logo.png" alt="logo" />
+          </div>
+          <div class="left-container">
+          
+            <div class="menu">
+              <ul>
+                <li>
+                  <a href="index.html"
+                    ><i class="fa-solid fa-house-user"></i> Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#teams"><i class="fa-solid fa-user-group"></i> Teams</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+         
+      <div class="right-container">
+        <div class="search-input">
+          <a href="" target="_blank" hidden></a>
+          <input type="text" placeholder="Enter team code...eg - MI" />
+          <div class="autocom-box">
+            <!-- LIST FOR SUGGESTIONS -->
+          </div>
+          <div class="icon"><i class="fas fa-search"></i></div>
+        </div>
+
+        <a href="add-team.html"
+          ><button
+            id="add-team-button"
+            class="add-button"
+            onclick="addteamclicked()"
+          >
+            <i class="fa-solid fa-plus"></i> Add Team
+          </button></a
+        >
+        <a href="add-player.html"
+          ><button
+            id="add-player-button"
+            class="add-button"
+            onclick="addPlayerClicked()"
+          >
+            <i class="fa-solid fa-plus"></i> Add Player
+          </button></a
+        >
+      </div>
+    </nav>
+    
+
+    <!--------- IMAGE SLIDER STARTS HERE --------->
+
+    <div class="slider">
+      <!-- SLIDER IMAG LIST -->
+      <div class="slider-list">
+        <div class="slider-item">
+          <img src="img/1.webp" alt="img1" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/2.webp" alt="img2" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/3.webp" alt="img3" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/4.webp" alt="img4" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/5.webp" alt="img4" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/6.webp" alt="img4" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/7.webp" alt="img4" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/8.webp" alt="img4" />
+        </div>
+
+        <div class="slider-item">
+          <img src="img/9.webp" alt="img4" />
+        </div>
+      </div>
+
+      <!-- BUTTONS - PREVIOUS $ NEXT -->
+      <div class="slider-btn">
+        <button id="prev">
+          <img src="logo_btn/btn-prev.png" alt="Previous_btn" />
+        </button>
+
+        <button id="next">
+          <img src="logo_btn/btn-next.png" alt="Next_btn" />
+        </button>
+      </div>
+
+      <!-- BUTTON DOTS (5 images = 5 dots) -->
+      <ul class="dots">
+        <li class="active1"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <!--------- IMAGE SLIDER ENDS HERE --------->
+
+    <!--------- TEAMS SECTION STARTS HERE --------->
+
+    <section id="teams">
+      <div class="card">
+        <div class="team-head">
+          <h1>IPL 2023 Teams</h1>
+        </div>
+        <div class="top-teams" id="container_teams">
+        </div>
+      </div>
+    </section>
+
+    <!--------- TEAMS SECTION ENDS HERE --------->
+
+    <footer>
+      <p class="footer">
+        Designed For Edyoda Digital University || By Ramesh Gharami.
+      </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index-data.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL 2023</title>
+    <link rel="icon" href="logo_btn/favicon.ico" type="image/png" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/cf845565b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- - - - - - - - - - - MAIN NAV - - - - - - - - - - -->
+
+    <nav class="navbar">
+      <div class="left-container">
+        <div class="logo">
+          <img src="logo_btn/ipl-logo.png" alt="logo" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="index.html"
+                ><i class="fa-solid fa-house-user"></i> Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <a href="add-team.html"
+          ><button
+            id="add-team-button"
+            class="add-button"
+            onclick="addteamclicked()"
+          >
+            <i class="fa-solid fa-plus"></i> Add Team
+          </button></a
+        >
+      </div>
+    </nav>
+
+    <!--------- MAIN SECTION STARTS HERE --------->
+
+    <main class="add-player">
+      <div class="add-team">
+        <div class="form">
+          <h1>Add Your Player Here !</h1>
+          <form id="addteamform" class="team-form">
+            <p><i class="fa-solid fa-image-portrait"></i> Player Name :</p>
+            <input
+              id="inp1"
+              type="text"
+              name="playerName"
+              placeholder="Enter player name here.."
+              required
+            />
+
+            <p><i class="fa-solid fa-trophy"></i> Price in Crore :</p>
+            <input
+              id="inp2"
+              type="number"
+              name="price"
+              maxlength="2"
+              placeholder="Enter price for player.."
+              required
+            />
+
+            <p>
+              <i class="fa-solid fa-circle-check"></i> Select Player playing :
+            </p>
+            <select
+              id="inp3"
+              type="text"
+              name="isPlaying"
+              placeholder="Enter playing status here.."
+              required
+            >
+              <option value="true">true</option>
+              <option value="false">false</option>
+            </select>
+
+            <p><i class="fa-solid fa-baseball"></i> Select the Role :</p>
+            <select id="inp4" type="text" name="role" required>
+              <option value="ALL-Rounder">ALL-Rounder</option>
+              <option value="Batsman">Batsman</option>
+              <option value="Bowler">Bowler</option>
+            </select>
+
+            <p><i class="fa-solid fa-image"></i> Player Image URL :</p>
+            <input
+              id="inp5"
+              type="text"
+              name="playerimg"
+              placeholder="Enter player image url.."
+              required
+            />
+
+            <p><i class="fa-solid fa-user-plus"></i> Enter Player Team :</p>
+            <select id="inp6" type="text" name="teamSelect" required></select>
+
+            <button type="submit">Add Player</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <br /><br /><br /><br />
+
+    <!--------- MAIN SECTION ENDS HERE --------->
+
+    <footer>
+      <p class="footer">
+        Designed For Edyoda Digital University || By Ramesh Gharami.
+      </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    <script src="add-player.js"></script>
+  </body>
+</html>

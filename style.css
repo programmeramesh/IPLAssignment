@@ -1,0 +1,986 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+:root {
+  --grad1: linear-gradient(
+    118deg,
+    #ff2d73 0%,
+    #ff2d3f 40%,
+    #ff502d 60%,
+    #ffb92d 100%
+  );
+  --grad2: linear-gradient(
+    118deg,
+    #1f006b 0%,
+    #54006b 40%,
+    #6b004c 60%,
+    #6b0017 100%
+  );
+  /* --grad2-0 : linear-gradient(118deg,#5e37c3 0%, #b74ad6 40%, #d33fa9 60%, #d64968 100%); */
+  --grey: linear-gradient(46deg, #b0b0b0 10%, #d3d3d3 30%, #f1f1f1 100%);
+
+  --box-shadow1: 1px 3px 12px 6px rgba(71, 71, 71, 0.44);
+  --box-shadow2: 3px 3px 10px #000000dd;
+  --box-shadow3: 1px 3px 12px 6px rgba(255, 255, 255, 0.848);
+
+  --font: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+    1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+    4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
+    4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
+    7px 6px 1px #cccccc;
+  --font1: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+  --font2: #e0e0e0 1px 1px 0;
+  --font3: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+
+  scroll-behavior: smooth;
+}
+
+/* --------------------- HEADER SECTION STARTS HERE ---------------------*/
+
+.top,
+.navbar,
+.left-container,
+.right-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ------------------------------------------ */
+
+/* TOP SECTION */
+.top {
+  background-color: #00176b;
+  height: 40px;
+  padding: 20px 0;
+}
+
+.top .top-left {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  color: #fff;
+}
+
+.top .top-left a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.top .top-left a img:nth-child(1) {
+  margin-right: 8px;
+}
+
+.top .top-left a p {
+  font-size: medium;
+}
+
+.top .top-right {
+  margin-right: 50px;
+}
+
+.top .top-right span {
+  color: #d6d6d6;
+  margin-right: 15px;
+  font-weight: 600;
+}
+
+.top .top-right a {
+  text-decoration: none;
+  color: #d6d6d6;
+}
+
+.top .top-right a i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #959595;
+  transition: 0.2s ease-in-out;
+}
+
+.top .top-right a i:hover {
+  color: #fff;
+}
+/* NAVBAR SECTION */
+
+.navbar {
+  background-color: #00eeff;
+  color:  #fff;
+  max-width: 100vw;
+  top: 0;
+  overflow: hidden;
+  position: sticky;
+  z-index: 100;
+}
+
+/* ------------------------------------------ */
+
+/* LOGO */
+.logo {
+  align-items: center;
+  margin: 10px;
+  max-width: 200px;
+  height: 75px;
+  overflow: hidden;
+  background-color: #2391d5;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  border-top: 2px solid rgb(255, 0, 0);
+  border-bottom: 2px solid #e6e6e67b;
+}
+
+.logo img {
+  max-width: 130px;
+  padding: 10px;
+  margin: 0 20px;
+  cursor: pointer;
+ 
+}
+
+/* ------------------------------------------ */
+
+/* LEFT CONTAINER */
+
+.left-container .menu ul {
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.menu ul li {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li a {
+  max-width: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 450;
+  color:  #ff0000;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 50px;
+  transition: ease-in-out 0.3s;
+
+  border: 2px solid transparent;
+  border-top: 2px solid rgb(255, 0, 0);
+  border-bottom: 2px solid #0000007b;
+}
+
+.menu ul li a:hover {
+  background-color:  rgb(255, 0, 0);
+  border: 2px solid #040404;
+  color: rgb(70, 70, 70);
+  box-shadow: var(--box-shadow3);
+}
+
+/* ------------------------------------------ */
+
+/* RIGHT CONTAINER */
+.right-container {
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
+  background-color: rgb(255, 0, 0);
+
+  padding-bottom: 15px;
+  width: 65%;
+  height: 100px;
+  display: flex;
+  justify-content: end;
+
+  /* overflow: hidden; */
+  position: sticky;
+  z-index: -10;
+}
+/* ------------------------------------------ */
+
+/* BUTTONS */
+
+.add-button {
+  background:#ff0000;
+  color: #00eeff;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 50px;
+  font-weight: 500;
+  padding: 10px;
+  margin: 0px 10px;
+  transition: ease-in-out 0.3s;
+  border: 2px solid transparent;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #00eeff;
+}
+
+.add-button:hover {
+  background-color: #00eeff;
+  color: #ff0000;
+  border: 3px solid #ff0000;
+  box-shadow: var(--box-shadow3);
+}
+
+/* ------------------------------------------ */
+
+/* SEARCH PART */
+
+.search-input {
+  /* margin-top: 10px; */
+  margin-right: 10px;
+  /* background-color: #ff0000; */
+  max-width: 300px;
+  border-radius: 50px;
+  position: relative;
+  height: 40px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+  align-items: center;
+}
+
+.search-input input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  color: rgb(255, 0, 0);
+  background-color: #ff0000;
+  padding: 0 60px 0 20px;
+  font-size: 15px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid #00eeff;
+}
+.search-input input:hover{
+  background-color: #00eeff;
+  box-shadow: var(--box-shadow3);
+  border: 2px solid rgb(255, 0, 0);
+
+}
+
+.search-input.active input {
+  border-radius: 50px;
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+  background-color: #00eeff;
+}
+.search-input.active input:hover {
+  border-radius: 50px;
+  color: rgb(255, 0, 0);
+}
+
+/* ------------------------------------------ */
+
+/* SEARCH SUGGESTION */
+
+.search-input .autocom-box {
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  height: fit-content;
+  /* max-height: 280px; */
+  z-index: 100;
+  position: relative;
+}
+
+.search-input.active .autocom-box {
+  padding: 10px 8px;
+  height: fit-content;
+  opacity: 1;
+  pointer-events: auto;
+  color: #000000;
+}
+
+.search-input.active .autocom-box li:hover {
+  background: #cccccc;
+  cursor: pointer;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 4px 10px;
+  display: none;
+  max-width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  position: relative;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  transition: 0.3s ease-in;
+}
+
+.search-input.active .autocom-box li {
+  display: block;
+  height:27px;
+  background-color: white;
+  border: 2px solid rgb(255, 0, 0);
+  box-shadow: 1px 1px 2px gray;
+}
+
+.autocom-box li:hover {
+  background: #ff0000;
+}
+
+.search-input .icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #272626;
+  cursor: pointer;
+
+  transition: 0.5s ease-in-out;
+}
+
+.search-input .icon:hover {
+  background: var(--grad1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------------------------------ */
+
+/* --------------------- IMAGE SLIDER STARTS HERE ---------------------*/
+
+.slider {
+  width: 100%;
+  max-width: 100vw;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+/* ------------------------------------------ */
+
+/* SLIDER LIST */
+
+.slider-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  width: max-content;
+  transition: 1s ease-in-out;
+}
+
+.slider-list .slider-item {
+  width: 100vw;
+}
+
+.slider-list img {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------------------ */
+
+/* SLIDER BUTTONS */
+
+.slider-btn {
+  position: absolute;
+  width: 4px;
+  border: none;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-btn button {
+ 
+  display: none;
+}
+
+/* ------------------------------------------ */
+
+/* SLIDER DOTS */
+
+.dots {
+  background-color: #9595957e;
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.dots li {
+  list-style-type: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 20px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.dots li.active1 {
+  width: 30px;
+  background: var(--grad1);
+  box-shadow: 1px 3px 12px 6px rgba(176, 213, 232, 0.931);
+  border: 1px solid #000000;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100vw;
+  }
+
+  .menu ul li a,
+  .add-button {
+    font-size: 10px;
+  }
+  .slider {
+    height: 400px;
+  }
+}
+
+/* --------------------- IMAGE SLIDER ENDS HERE ---------------------*/
+
+/* --------------------- TEAMS SECTION STARTS HERE ---------------------*/
+
+.card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+/* ------------------------------------------ */
+
+/* TEAM HEAD */
+
+.team-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  background-color: #00eeff;
+  width: 100vw;
+  box-shadow: var(--box-shadow2);
+}
+.team-head h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-size: 78px;
+  color: #0bbed6;
+  display: inline-flex;
+  background: url("./img/3.webp");
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #5b728a54;
+  animation: move 30s linear infinite;
+  letter-spacing: 0.3rem;
+}
+@keyframes move {
+  from {
+    background-position: 0 80%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+/* ------------------------------------------ */
+
+/* TOP TEAMS */
+
+.top-teams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.team {
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  background: linear-gradient(360deg, red, #00eeff);
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 0 20px 20px;
+  box-shadow: var(--box-shadow2);
+  cursor: pointer;
+  padding-bottom: 40px;
+  transition: ease-in-out 0.3s;
+}
+
+.team:hover {
+  transform: scale(1.1);
+  transition: transform 3s;
+  transform: rotateY(360deg);
+}
+
+.team .team-img {
+  padding: 30px;
+}
+
+.team .team-img img {
+  width: 200px;
+  object-fit: cover;
+  color: red;
+}
+
+.team .team-info {
+  /* background: #959595; */
+  background-image: linear-gradient(red, #534d4d);
+  color: #7f8bad  ;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.team .team-info .team-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --------------------- TEAMS SECTION ENDS HERE ---------------------*/
+
+/* --------------------- FOOTER SECTION STARTS HERE ---------------------*/
+
+footer {
+  background-color: #11141c;
+}
+
+.foot-links .copyright {
+  background: #00000077;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+  padding: 5px 0;
+}
+
+.footer {
+  color: #fff;
+  text-align: center;
+  font-size: large;
+}
+.heart {
+  color: red;
+}
+
+/* --------------------- FOOTER SECTION ENDS HERE ---------------------*/
+
+/* --------------------- SCROLL BAR ---------------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #acacac68;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--grad2);
+}
+
+/* --------------------- SCROLL BAR ENDS ---------------------*/
+
+/* --------------------- ADD TEAM HTML STARTS HERE ---------------------*/
+
+/* ADD TEAM FORM */
+
+.add-team {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45rem;
+}
+
+.add-team .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-team .form h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  text-shadow: var(--font1);
+}
+
+.add-team .form .team-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 1px 20px;
+  box-shadow: var(--box-shadow2);
+  border-radius: 20px;
+}
+
+/* ------------------------------------------ */
+
+.add-team .form .team-form p {
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+.add-team .form .team-form p i {
+  color: #5b18ad;
+  margin-right: 5px;
+}
+
+.add-team .form .team-form input,
+.team-form button {
+  margin-bottom: 30px;
+  width: 400px;
+  padding: 8px;
+  font-size: 1rem;
+  box-shadow: var(--box-shadow1);
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ------------------------------------------ */
+
+.add-team .form .team-form button {
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: #011f8b;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.add-team .form .team-form button:hover {
+  background-color: #000e3f;
+}
+
+.add-team .form #inp4::-webkit-outer-spin-button,
+.add-team .form #inp4::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-team .form .team-form select {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: var(--box-shadow2);
+  margin-bottom: 25px;
+}
+
+.add-player {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45rem;
+  height: 100vh;
+}
+
+/* --------------------- ADD TEAM HTML ENDS HERE ---------------------*/
+
+/* --------------------- TEAMS HTML STARTS HERE ---------------------*/
+
+.main-team-details {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 0;
+
+  background-repeat: no-repeat;
+}
+
+/* ------------------------------------------ */
+
+/* TEAM DETAILS LEFT */
+
+.main-team-details .team-details-left {
+  padding-right: 50px;
+}
+
+.main-team-details .team-details-left .details-1 {
+  margin-left: 150px;
+}
+
+.main-team-details .team-details-left .details-1 h1 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fff;
+  margin-left: 50px;
+}
+
+.main-team-details .team-details-left .details-1 .team-logo {
+  margin-top: 30px;
+}
+
+.main-team-details .team-details-left .details-1 .team-logo img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.main-team-details .team-details-left .details-1 .team-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-team-details .team-details-left .details-1 .team-heading img {
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+/* ------------------------------------------ */
+
+/* TEAM DETAILS RIGHT */
+
+.main-team-details .team-details-right {
+  margin-right: 150px;
+}
+
+.main-team-details .team-details-right .details-2 {
+  color: #fff;
+  background: #112a5c;
+  border-radius: 10px;
+}
+
+.main-team-details .team-details-right .details-2 span {
+  color: #ffc52f;
+  text-align: start;
+  display: block;
+  width: 10rem;
+}
+
+.main-team-details .team-details-right .details-2 p {
+  width: 100%;
+  margin: 0;
+  padding: 11px 15px 8px;
+  display: flex;
+  font-size: 18px;
+  border-bottom: 2px solid #031945;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main-team-details .team-details-right .details-2 p b {
+  margin-right: 15px;
+}
+
+/* --------------------- TEAMS HTML EDS HERE ---------------------*/
+
+/* --------------------- TEAMS - PLAYER DETAILS STARTS HERE ---------------------*/
+
+.top-players {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  justify-items: center;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+}
+
+/* ------------------------------------------ */
+.player {
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  background-color: #00eeff;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 0 20px 20px;
+  box-shadow: var(--box-shadow2);
+  cursor: pointer;
+  padding-bottom: 40px;
+  background-color:#00eeff;
+  background-image: linear-gradient(360deg, red, #00eeff);
+}
+
+.player:hover {
+  /* background: #ff0000; */
+  transition: transform 2s;
+  transform: rotateY(360deg);
+}
+
+/* ------------------------------------------ */
+
+.player .player-img {
+  padding: 30px;
+}
+
+.player .player-img img {
+  width: 200px;
+  object-fit: cover;
+ 
+}
+
+.player .player-info {
+  background-image: linear-gradient(red, #534d4d);
+  color: #7f8bad;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.player .player-info .player-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* --------------------- TEAMS - PLAYER DETAILS ENDS HERE ---------------------*/
+
+/* --------------------- PLAYER DETAILS HTML STARTS HERE ---------------------*/
+
+.PlayerDetailsPage {
+  padding: 40px 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+.PlayerDetailsPage h1 {
+  text-transform: uppercase;
+  text-shadow: var(--font1);
+  background: var(--grey);
+  margin-bottom: 40px;
+  font-size: 3rem;
+  padding: 15px 0;
+  border: 3px solid #000000;
+}
+
+/* ------------------------------------------ */
+
+.player-Details {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+
+/* ------------------------------------------ */
+
+/* PLAYER DETAILS - LEFT */
+
+.player-Details .player-left .player-image {
+  background-color: #bcbcbc52;
+  box-shadow: var(--box-shadow2);
+  border-radius: 30px;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding-bottom: 20px;
+  background-image: linear-gradient(360deg, red, #00eeff);
+}
+.player-Details .player-left .player-image:hover{
+  transition: transform 5s;
+  transform: rotateY(360deg);
+}
+
+.player-Details .player-left .player-image img {
+  width: 350px;
+}
+
+.player-Details .player-left .player-image .player-name h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #7f8bad;
+  
+}
+
+/* ------------------------------------------ */
+
+/* PLAYER DETAILS - RIGHT */
+
+.player-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-right .team-details-right .details-2 {
+  color: #fff;
+  background-image: linear-gradient(red, #534d4d);
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: var(--box-shadow3);
+  border: 2px solid #fff;
+}
+
+.player-right .team-details-right .details-2 span {
+  color: #23d5ab;
+  text-align: start;
+  display: block;
+  width: 12rem;
+}
+
+.player-right .team-details-right .details-2 p {
+  width: 100%;
+  margin: 0;
+  padding: 11px 15px 8px;
+  display: flex;
+  font-size: 18px;
+  border-bottom: 2px solid #031945;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.player-right .team-details-right .details-2 p b {
+  margin-right: 15px;
+}
+/* --------------------- PLAYER DETAILS HTML ENDS HERE ---------------------*/
