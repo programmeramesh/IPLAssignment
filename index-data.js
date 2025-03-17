@@ -7,9 +7,9 @@ var teamData = [
       sName: "MI",
       fullSname: "MI (Mumbai Indians)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/MI/Logos/Roundbig/MIroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/MI/Logos/Logooutline/MIoutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/MI-Team-Players-List-with-Prices.webp",
+      // teamLogo:
+      //   "https://imagesvs.oneindia.com/img/2024/11/mumbaiindians4-1732472254.jpg",
       WonCount: 5,
     },
     {
@@ -18,9 +18,9 @@ var teamData = [
       sName: "CSK",
       fullSname: "CSK (Chennai Super King)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Roundbig/CSKroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/CSK/logos/Logooutline/CSKoutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/Chennai-Super-Kings-Full-Squad.webp",
+      // teamLogo:
+      //   "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/640px-Chennai_Super_Kings_Logo.svg.png",
       WonCount: 4,
     },
     {
@@ -29,9 +29,9 @@ var teamData = [
       sName: "RCB",
       fullSname: "RCB (Royal challengers Bangalore)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RCB/Logos/Roundbig/RCBroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RCB/Logos/Logooutline/RCBoutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/IPL-2025-RCB-Team-Players.webp",
+      // teamLogo:
+      //   "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RCB/Logos/Logooutline/RCBoutline.png",
       WonCount: 0,
     },
     {
@@ -40,9 +40,9 @@ var teamData = [
       sName: "KKR",
       fullSname: "KKR (Kolkata Knight Riders)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/KKR/Logos/Roundbig/KKRroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/KKR/Logos/Logooutline/KKRoutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/KKR-squad-2025.webp",
+      // teamLogo:
+      //   "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/KKR/Logos/Logooutline/KKRoutline.png",
       WonCount: 2,
     },
     {
@@ -51,9 +51,9 @@ var teamData = [
       sName: "DC",
       fullSname: "DC (Delhi Capitals)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/DC/Logos/Roundbig/DCroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/DC/Logos/LogoOutline/DCoutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/DC-full-squad.webp",
+      // teamLogo:
+      //   "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/DC/Logos/LogoOutline/DCoutline.png",
       WonCount: 2,
     },
     {
@@ -62,9 +62,9 @@ var teamData = [
       sName: "GT",
       fullSname: "GT (Gujarat Tistan)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/GT/Logos/Roundbig/GTroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/GT/Logos/Logooutline/GToutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/Gujarat-Titans-Full-Squad-2025.webp",
+      // teamLogo:
+      //   "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/GT/Logos/Logooutline/GToutline.png",
       WonCount: 2,
     },
   
@@ -74,9 +74,9 @@ var teamData = [
       sName: "RR",
       fullSname: "RR (Rajasthan Royals)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RR/Logos/Roundbig/RRroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RR/Logos/Logooutline/RRoutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/IPL-2025-RR-Team-Players-List.webp",
+      // teamLogo:
+      //   "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/RR/Logos/Logooutline/RRoutline.png",
       WonCount: 1,
     },
     {
@@ -85,9 +85,9 @@ var teamData = [
       sName: "SH",
       fullSname: "SH (Sunrises Hyderabad)",
       teamIcon:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/SRH/Logos/Roundbig/SRHroundbig.png",
-      teamLogo:
-        "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/SRH/Logos/Logooutline/SRHoutline.png",
+        "https://uccricket.live/wp-content/uploads/2024/11/SunRisers-Hyderabad-Full-Squad-2025.webp",
+      // teamLogo:
+      //   "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/SRH/Logos/Logooutline/SRHoutline.png",
       WonCount: 1,
     },
   ];
