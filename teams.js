@@ -13,38 +13,56 @@ var teamDetailsTable = document.getElementById("team-details");
 
 var cnt = 0;
 
-for (var i = 0; i < playersDetails.length; i++) {
-  if (teamFull == playersDetails[i].from) {
-    var isPlay = "";
-    if (playersDetails[i].isPlaying == true) {
-      isPlay = "Playing";
-    } else {
-      isPlay = "On Bench";
-    }
-    var currentP = playersDetails[i].playerName;
-    cnt++;
-    teamMainBox.innerHTML += `
-  <div class="player" onclick="makethisinclick('${currentP}')">
-    <div class="player-img">
-        <img src="${playersDetails[i].playerImg}" alt="${playersDetails[i].from}">
-        <div class="overlay"></div>
-    </div>
-
-    <div class="player-info">
-      <p class="player-name">${playersDetails[i].playerName}</p>
-      <p class="price">Worth : ${playersDetails[i].price} </p>
-      <p class="playing">Playing : ${isPlay} </p>
-      <p class="desc">${playersDetails[i].description} </p>
-    </div>
-</div>
-
-`;
-  }
-
-  function makethisinclick(res) {
-    window.open(`./playerDetails.html?name=${res}`, "_self");
-  }
+// Find team details
+let teamDetails = teamsDetails.find(team => team.sName === teamFull);
+if (!teamDetails) {
+    window.location.href = 'index.html';
 }
+
+// Update team banner
+document.getElementById('team-logo').src = teamDetails.teamIcon;
+document.getElementById('team-name').textContent = teamDetails.teamFullName;
+document.getElementById('team-wins').textContent = teamDetails.WonCount;
+
+// Get players for this team
+let teamPlayers = playersDetails.filter(player => player.from === teamFull);
+document.getElementById('player-count').textContent = teamPlayers.length;
+
+// Render players
+const playerContainer = document.getElementById('player-container');
+teamPlayers.forEach(player => {
+    const playerCard = document.createElement('div');
+    playerCard.className = 'player-box';
+    playerCard.innerHTML = `
+        <div class="player-image">
+            <img src="${player.playerImg}" alt="${player.playerName}">
+        </div>
+        <div class="player-info">
+            <h3 class="player-name">${player.playerName}</h3>
+            <p class="player-role">${player.description}</p>
+            <p class="player-price">₹ ${player.price} Cr</p>
+        </div>
+    `;
+    
+    // Add click event to view player details
+    playerCard.addEventListener('click', () => {
+        window.location.href = `playerDetails.html?name=${player.playerName}`;
+    });
+    
+    playerContainer.appendChild(playerCard);
+});
+
+// Interactive card effects
+document.addEventListener('mousemove', function(e) {
+    document.querySelectorAll('.player-box').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+    });
+});
 
 // search for top batsman
 

@@ -1,35 +1,36 @@
 let localTeam = JSON.parse(localStorage.getItem("teamArray")) || [];
-
 let localPlayers = JSON.parse(localStorage.getItem("playerArray"));
 
-$("#addteamform").submit(function (e) {
-  e.preventDefault();
+document.getElementById("addTeamForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  let inp_val = $("#inp1").val();
-  let shortName = "";
-  for (let i = 0; i < inp_val.length; i++) {
-    if (i == 0) {
-      shortName += inp_val[i++].toUpperCase();
-      continue;
-    } else if (inp_val[i] == " ") {
-      shortName += inp_val[++i].toUpperCase();
-      i++;
+    const teamName = document.getElementById("teamName").value;
+    let teamCode = document.getElementById("teamCode").value.toUpperCase();
+    
+    // If team code is not provided, generate it from team name
+    if (!teamCode) {
+        teamCode = "";
+        const words = teamName.split(" ");
+        for (let word of words) {
+            if (word.length > 0) {
+                teamCode += word[0].toUpperCase();
+            }
+        }
     }
-  }
 
-  let addData = {
-    id: localTeam.length,
-    teamFullName: $("#inp1").val(),
-    sName: shortName,
+    const addData = {
+        id: localTeam.length,
+        teamFullName: teamName,
+        sName: teamCode,
+        teamIcon: document.getElementById("teamIcon").value,
+        WonCount: document.getElementById("wonCount").value,
+        topBatsman: document.getElementById("topBatsman").value,
+        topBowler: document.getElementById("topBowler").value
+    };
 
-    teamIcon: $("#inp3").val(),
-    WonCount: $("#inp4").val(),
-  };
+    localTeam.push(addData);
+    localStorage.setItem("teamArray", JSON.stringify(localTeam));
 
-  localTeam.push(addData);
-  localStorage.setItem("teamArray", JSON.stringify(localTeam));
-
-  $("#teamLogo").attr("src", $("#inp3").val());
-
-  location.href = `teams.html?name=${addData.sName}`;
+    // Redirect to teams page with the new team code
+    window.location.href = `teams.html?name=${addData.sName}`;
 });

@@ -3,82 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Team</title>
+    <title>Edit Player</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        /* Add modern glass-morphism design */
-        .form-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* Organize form sections */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        /* Enhance input fields */
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .input-group input {
-            width: 100%;
-            height: 40px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        /* Consistent styling with add-player page */
-        .form-actions {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .submit-btn {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .submit-btn:hover {
-            background-color: #3e8e41;
-        }
-
-        /* Better visual hierarchy */
-        h1, h2, h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-
-        h3 {
-            font-size: 18px;
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -97,7 +24,7 @@
             </div>
             <div class="nav-right">
                 <div class="search-input">
-                    <input type="text" id="teamSearch" name="teamSearch" placeholder="Enter team code...eg - MI" />
+                    <input type="text" placeholder="Enter team code...eg - MI" />
                     <div class="icon"><i class="fas fa-search"></i></div>
                 </div>
                 <div class="nav-buttons">
@@ -108,66 +35,110 @@
         </div>
     </nav>
 
-    <!-- Add Team Form Section -->
+    <!-- Edit Player Form Section -->
     <div class="form-container">
         <div class="form-card">
-            <h2><i class="fas fa-shield-alt"></i> Add New Team</h2>
-            <form id="addTeamForm">
+            <h2><i class="fas fa-user-edit"></i> Edit Player</h2>
+            <form id="editPlayerForm">
                 <div class="form-grid">
-                    <!-- Team Information -->
+                    <!-- Basic Information -->
                     <div class="form-section">
-                        <h3><i class="fas fa-info-circle"></i> Team Information</h3>
+                        <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
                         <div class="input-group">
-                            <label for="teamName">
-                                <i class="fas fa-users"></i> Team Name
+                            <label for="inp1">
+                                <i class="fas fa-user"></i> Player Name
                             </label>
-                            <input type="text" id="teamName" placeholder="Enter team name" required />
+                            <input type="text" id="inp1" placeholder="Enter player name" required />
                         </div>
                         
                         <div class="input-group">
-                            <label for="teamIcon">
-                                <i class="fas fa-image"></i> Team Icon URL
+                            <label for="inp2">
+                                <i class="fas fa-coins"></i> Price
                             </label>
-                            <input type="url" id="teamIcon" placeholder="Enter team icon URL" required />
+                            <input type="number" id="inp2" placeholder="Enter price in Cr" required />
+                        </div>
+                        
+                        <div class="input-group checkbox-group">
+                            <label for="inp3">
+                                <i class="fas fa-running"></i> Playing Status
+                            </label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="inp3" />
+                                <label for="inp3" class="switch-label"></label>
+                            </div>
                         </div>
                         
                         <div class="input-group">
-                            <label for="teamCode">
-                                <i class="fas fa-code"></i> Team Code
+                            <label for="inp4">
+                                <i class="fas fa-cricket-bat-ball"></i> Player Role
                             </label>
-                            <input type="text" id="teamCode" placeholder="Enter team code (e.g., MI)" required maxlength="3" />
+                            <select id="inp4" required>
+                                <option value="">Select a role</option>
+                                <option value="ALL-Rounder">ALL-Rounder</option>
+                                <option value="Batsman">Batsman</option>
+                                <option value="Bowler">Bowler</option>
+                            </select>
                         </div>
                     </div>
 
-                    <!-- Championship History -->
+                    <!-- Team Information -->
                     <div class="form-section">
-                        <h3><i class="fas fa-trophy"></i> Championship History</h3>
+                        <h3><i class="fas fa-users"></i> Team Information</h3>
                         <div class="input-group">
-                            <label for="wonCount">
-                                <i class="fas fa-medal"></i> Championships Won
+                            <label for="inp5">
+                                <i class="fas fa-image"></i> Player Image URL
                             </label>
-                            <input type="number" id="wonCount" placeholder="Number of championships" min="0" required />
+                            <input type="url" id="inp5" placeholder="Enter image URL" required />
                         </div>
                         
                         <div class="input-group">
-                            <label for="topBatsman">
-                                <i class="fas fa-running"></i> Top Batsman
+                            <label for="inp6">
+                                <i class="fas fa-shield-alt"></i> Select Team
                             </label>
-                            <input type="text" id="topBatsman" placeholder="Enter top batsman name" required />
+                            <select id="inp6" required>
+                                <option value="">Select a team</option>
+                            </select>
                         </div>
-                        
-                        <div class="input-group">
-                            <label for="topBowler">
-                                <i class="fas fa-bowling-ball"></i> Top Bowler
-                            </label>
-                            <input type="text" id="topBowler" placeholder="Enter top bowler name" required />
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-chart-line"></i> Player Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="input-group">
+                                <label for="matches">
+                                    <i class="fas fa-trophy"></i> Matches
+                                </label>
+                                <input type="number" id="matches" placeholder="Matches played" min="0" required />
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="runs">
+                                    <i class="fas fa-running"></i> Runs
+                                </label>
+                                <input type="number" id="runs" placeholder="Total runs" min="0" required />
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="wickets">
+                                    <i class="fas fa-bowling-ball"></i> Wickets
+                                </label>
+                                <input type="number" id="wickets" placeholder="Total wickets" min="0" required />
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="average">
+                                    <i class="fas fa-chart-bar"></i> Average
+                                </label>
+                                <input type="number" id="average" placeholder="Batting average" min="0" step="0.01" required />
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-actions">
                     <button type="submit" class="submit-btn">
-                        <i class="fas fa-plus-circle"></i> Add Team
+                        <i class="fas fa-save"></i> Save Changes
                     </button>
                 </div>
             </form>
@@ -211,6 +182,7 @@
         </div>
     </footer>
 
+    <script src="index-data.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

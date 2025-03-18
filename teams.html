@@ -1,123 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IPL 2023</title>
-    <link rel="icon" href="logo_btn/favicon.ico" type="image/png" />
-
-    <link rel="stylesheet" href="style.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/cf845565b5.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- - - - - - - - - - - MAIN NAV - - - - - - - - - - -->
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
     <nav class="navbar">
-      <div class="left-container">
-        <div class="logo">
-          <img src="logo_btn/ipl-logo.png" alt="logo" />
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <img src="logo_btn/ipl-logo.png" alt="logo" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html"><i class="fa-solid fa-house-user"></i> Home</a></li>
+                        <li><a href="index.html#teams"><i class="fa-solid fa-user-group"></i> Teams</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="search-input">
+                    <input type="text" placeholder="Enter team code...eg - MI" />
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+                <div class="nav-buttons">
+                    <a href="add-team.html"><button class="add-button"><i class="fa-solid fa-plus"></i> Add Team</button></a>
+                    <a href="add-player.html"><button class="add-button"><i class="fa-solid fa-plus"></i> Add Player</button></a>
+                </div>
+            </div>
         </div>
-        <div class="menu">
-          <ul>
-            <li>
-              <a href="index.html"
-                ><i class="fa-solid fa-house-user"></i> Home</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="right-container">
-        <a href="add-team.html"
-          ><button
-            id="add-team-button"
-            class="add-button"
-            onclick="addteamclicked()"
-          >
-            <i class="fa-solid fa-plus"></i> Add Team
-          </button></a
-        >
-        <a href="add-player.html"
-          ><button
-            id="add-player-button"
-            class="add-button"
-            onclick="addPlayerClicked()"
-          >
-            <i class="fa-solid fa-plus"></i> Add Player
-          </button></a
-        >
-      </div>
     </nav>
 
-    <!--------- TEAM DETAILS STARTS HERE --------->
-
-    <main>
-      <div class="main-team-details" id="team-details">
-        <!--
-        <div class="team-details-left">
-            <div class="details-1">
-                <div class="team-heading">
-                    <h1>Mumbai Indians</h1>
-                    <img src="line1.png" alt="">
-                </div>
-
+    <!-- Team Details Section -->
+    <div class="team-details-container">
+        <div class="team-banner">
+            <div class="team-info">
                 <div class="team-logo">
-                    <img src="https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/MI/Logos/Logooutline/MIoutline.png" alt="MI">
+                    <img id="team-logo" src="" alt="Team Logo">
                 </div>
-                
+                <div class="team-stats">
+                    <h1 id="team-name"></h1>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <p>Championships</p>
+                            <h3 id="team-wins"></h3>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <p>Top Players</p>
+                            <h3 id="player-count"></h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="team-details-right">
-            <div class="details-2">
-                <p><span>Top Batsman</span> <b>-</b> Rohit Sharma</p>
-                <p><span>Top Bowler</span> <b>-</b> Jaspreet Bumrah</p>
-                <p><span>Matches Win</span> <b>-</b> 5</p>
-                <p><span>Player Count</span> <b>-</b> 5</p>
+        <!-- Team Players Section -->
+        <div class="team-players-section">
+            <h2><i class="fas fa-users"></i> Team Squad</h2>
+            <div class="players-grid" id="player-container">
+                <!-- Players will be dynamically added here -->
             </div>
         </div>
-        -->
-      </div>
-
-      <div class="top-players" id="container_teams">
-        <!--
-        <div class="player"> 
-            <div class="player-img">
-                <img src="https://assets.iplt20.com/ipl/IPLHeadshot2022/107.png" alt="MI">
-                <div class="overlay"></div>
-            </div>
-
-            <div class="player-info">
-                <p class="player-name">Rohit Sharma</p>
-                <p class="price">Worth : 14.50 Cr </p>
-                <p class="playing">Playing : Playing </p>
-                <p class="desc">Batsman </p>
-            </div>
-        </div>
-        -->
-      </div>
-    </main>
-
-    <!--------- TEAM DETAILS ENDS HERE --------->
-
-    <footer>
-      <p class="footer">
-       Designed For Edyoda Digital University || By Ramesh Gharami.
-      </p>
-    </footer>
+    </div>
 
     <script src="index-data.js"></script>
     <script src="index.js"></script>
     <script src="teams.js"></script>
-  </body>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-info-circle"></i> About IPL</h3>
+                <p>The Indian Premier League (IPL) is a professional Twenty20 cricket league in India. It is one of the most-attended cricket leagues in the world and has revolutionized the game.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul class="quick-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html#teams"><i class="fas fa-users"></i> Teams</a></li>
+                    <li><a href="add-team.html"><i class="fas fa-plus-circle"></i> Add Team</a></li>
+                    <li><a href="add-player.html"><i class="fas fa-user-plus"></i> Add Player</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-envelope"></i> Contact</h3>
+                <p>Have questions or suggestions? We'd love to hear from you.</p>
+                <p><i class="fas fa-envelope"></i> Email: info@ipl.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +91 123 456 7890</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 IPL. Designed with <i class="fas fa-heart"></i> by <a href="#">Ramesh Gharami</a></p>
+        </div>
+    </footer>
+</body>
 </html>
